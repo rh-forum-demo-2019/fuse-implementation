@@ -20,6 +20,13 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
+<mirrors>
+    <!--mirror>
+      <id>nexus</id>
+      <mirrorOf>*</mirrorOf>
+      <url>http://nexus-cicd.3.123.154.110.nip.io/nexus/content/groups/public/</url>
+    </mirror-->
+  </mirrors>
   <profiles>
     <profile>
       <id>fuse.repos</id>
