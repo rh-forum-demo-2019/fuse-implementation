@@ -1,0 +1,56 @@
+def templateName = 'fuse-implementation'
+pipeline {
+          agent {
+            node {
+              label 'maven'
+            }
+          }
+          options {
+            timeout(time: 20, unit: 'MINUTES')
+          }
+          stages {
+            stage('Build Image') {
+                steps {
+                    script {
+                      openshift.withCluster() {
+                        openshift.withProject('beer-demo-qa') {
+                          openshift.selector("bc", templateName).startBuild("--wait=true")
+                        }
+                      }           
+                        
+                    }
+                }
+                
+            }
+            stage('Tag image for production') {
+                steps {
+                    script {
+                        openshift.withCluster {
+                            openshift.withProject('beer-demo-prod') {
+                                openshift.tag("beer-demo-qa/fuse-implementation:latest", "beer-demo-prod/fuse-implementation:latest")
+                            }
+                        }
+                    }
+                }
+            }
+            stage('Promote to production?') {
+                steps {
+                  timeout(time:15, unit:'MINUTES') {
+                    input message: "Promote to STAGE?", ok: "Promote"
+                  }
+                    script {
+                        openshift.withCluster {
+                                openshift.withProject('beer-demo-prod') {
+                                  def rm = openshift.selector("dc", templateName).rollout().latest()
+                                  timeout(5) { 
+                                    openshift.selector("dc", templateName).related('pods').untilEach(1) {
+                                      return (it.object().status.phase == "Running")
+                                    }
+                                  }                               
+                                 }
+                        }
+                    }
+                }
+            }
+          }
+}
