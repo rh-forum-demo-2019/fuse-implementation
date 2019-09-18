@@ -13,7 +13,7 @@ public class GetBeerByNameRoute extends RouteBuilder {
 
   @Override
   public void configure() throws Exception {
-    from("direct:GetBeer").process(new Processor() {
+    from("direct:GetBeer").log("GetBeer - Beer name requested: ${header.name}").process(new Processor() {
 
       @Override
       public void process(Exchange exchange) throws Exception {
