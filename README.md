@@ -1,8 +1,10 @@
-# Spring-Boot Camel QuickStart
+# Beer application
 
-This example demonstrates how you can use Apache Camel with Spring Boot.
+This is a Fuse implementation of a simple beer API.
 
-The quickstart uses Spring Boot to configure a little application that includes a Camel route that triggers a message every 5th second, and routes the message to a log.
+### CodeReady
+
+If you just want to get started, access the [code ready workspace](http://codeready-workspaces.35.157.248.93.nip.io/f?id=factorygl8vvkbsqjtdyk9l)
 
 ### Building
 
