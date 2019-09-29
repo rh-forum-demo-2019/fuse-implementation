@@ -15,8 +15,10 @@
  */
 package org.mycompany;
 
+import org.mycompany.service.BeerService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 /**
  * A spring-boot application that includes a Camel route builder to setup the Camel routes
@@ -29,4 +31,8 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
+    @Bean
+    public BeerService beerService() {
+        return new BeerService();
+    }
 }
