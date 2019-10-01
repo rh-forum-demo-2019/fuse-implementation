@@ -10,14 +10,14 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class GetBeersRoute extends RouteBuilder {
+public class GetBeers extends RouteBuilder {
 
   @Autowired
   private BeerService mBeerService;
 
   @Override
   public void configure() throws Exception {
-    from("direct:ListBeers").log("ListBeers").process(new Processor() {
+    from("direct:GetBeers").log("GetBeers").process(new Processor() {
 
       @Override
       public void process(Exchange exchange) throws Exception {
