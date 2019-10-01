@@ -17,7 +17,7 @@ public class GetBeers extends RouteBuilder {
 
   @Override
   public void configure() throws Exception {
-    from("direct:GetBeers").log("GetBeers").process(new Processor() {
+    from("direct:ListBeers").log("GetBeers").process(new Processor() {
 
       @Override
       public void process(Exchange exchange) throws Exception {
