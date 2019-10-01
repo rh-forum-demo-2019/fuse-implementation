@@ -43,7 +43,7 @@
     <dependency>
       <groupId>com.example</groupId>
       <artifactId>beer</artifactId>
-      <version>1.0</version>
+      <version>1.3</version>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
