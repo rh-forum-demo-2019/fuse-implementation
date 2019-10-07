@@ -55,14 +55,14 @@
     <repository>
         <id>ocp-nexus-repo</id>
         <name>ocp nexus repo</name>
-        <url>http://nexus-cicd.35.157.248.93.nip.io/nexus/content/groups/public/</url>
+        <url>http://nexus-cicd.35.156.131.76.nip.io/nexus/content/groups/public/</url>
     </repository>
 </repositories>
   <pluginRepositories>
     <pluginRepository>
         <id>ocp-nexus-repo</id>
         <name>ocp nexus repo</name>
-        <url>http://nexus-cicd.35.157.248.93.nip.io/nexus/content/groups/public/</url>
+        <url>http://nexus-cicd.35.156.131.76.nip.io/nexus/content/groups/public/</url>
     </pluginRepository>
   </pluginRepositories>
   <build>
