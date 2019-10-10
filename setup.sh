@@ -11,3 +11,4 @@ oc tag beer-demo-qa/fuse-implementation:latest beer-demo-prod/fuse-implementatio
 oc new-app fuse-implementation -n beer-demo-prod
 oc expose svc fuse-implementation -n beer-demo-prod
 oc set triggers dc/fuse-implementation --manual -n beer-demo-prod
+oc create -f pipeline.yaml -n cicd
