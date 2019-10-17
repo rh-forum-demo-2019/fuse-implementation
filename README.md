@@ -4,7 +4,7 @@ This is a Fuse implementation of a simple beer API.
 
 ### CodeReady
 
-If you just want to get started, access the [code ready workspace](http://codeready-workspaces.35.156.131.76.nip.io/f?id=factoryonyo1pbbwo0sdo43)
+If you just want to get started, access the [code ready workspace](http://codeready-code-ready.apps.norway-98ac.open.redhat.com/f?id=factorydyq26plxz449tufa)
 
 ### Building
 
