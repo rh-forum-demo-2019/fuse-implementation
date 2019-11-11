@@ -51,6 +51,7 @@
       <version>2.21.0.fuse-740039-redhat-00001</version>
     </dependency>
   </dependencies>
+<!--
 <repositories>
     <repository>
         <id>ocp-nexus-repo</id>
@@ -58,6 +59,7 @@
         <url>http://nexus-cicd.apps.norway-98ac.open.redhat.com/nexus/content/groups/public/</url>
     </repository>
 </repositories>
+
   <pluginRepositories>
     <pluginRepository>
         <id>ocp-nexus-repo</id>
@@ -65,6 +67,7 @@
         <url>http://nexus-cicd.apps.norway-98ac.open.redhat.com/nexus/content/groups/public/</url>
     </pluginRepository>
   </pluginRepositories>
+-->
   <build>
     <defaultGoal>spring-boot:run</defaultGoal>
     <plugins>
